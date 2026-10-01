@@ -1,0 +1,611 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================================
+   ROOT
+========================================= */
+
+:root {
+
+    --navy: #102a43;
+    --navy-dark: #0b1f33;
+
+    --blue: #3b6f9e;
+    --blue-light: #eaf1f7;
+
+    --gold: #c89a3d;
+    --gold-light: #f1dfb7;
+
+    --white: #ffffff;
+
+    --background: #f4f6f8;
+
+    --text: #132b40;
+    --muted: #718096;
+
+    --border: #e2e8ee;
+
+    --shadow:
+        0 10px 30px rgba(16, 42, 67, 0.08);
+
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+
+    font-family: "Inter", sans-serif;
+
+    background:
+        linear-gradient(
+            180deg,
+            #f8fafc 0%,
+            #f1f4f7 100%
+        );
+
+    color: var(--text);
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
+}
+
+
+/* =========================================
+   BACKGROUND SHAPES
+========================================= */
+
+.bg-shape {
+
+    position: fixed;
+
+    pointer-events: none;
+
+    z-index: -1;
+
+}
+
+
+/* Top */
+
+.shape-one {
+
+    width: 280px;
+    height: 280px;
+
+    top: -170px;
+    right: -130px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(59,111,158,0.15),
+            rgba(59,111,158,0)
+        );
+
+}
+
+
+/* Bottom */
+
+.shape-two {
+
+    width: 330px;
+    height: 330px;
+
+    bottom: -210px;
+    left: -180px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(200,154,61,0.12),
+            rgba(200,154,61,0)
+        );
+
+}
+
+
+/* =========================================
+   APP
+========================================= */
+
+.app {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    margin: auto;
+
+    padding:
+        42px
+        18px
+        35px;
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+
+    text-align: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* Small heading */
+
+.small-title {
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    color: var(--blue);
+
+    margin-bottom: 10px;
+
+}
+
+
+/* Main title */
+
+.header h1 {
+
+    font-size: 34px;
+
+    line-height: 1.1;
+
+    letter-spacing: -1.5px;
+
+    font-weight: 800;
+
+    color: var(--navy);
+
+}
+
+
+.header h1 span {
+
+    color: var(--gold);
+
+}
+
+
+/* Subtitle */
+
+.header p {
+
+    margin-top: 9px;
+
+    font-size: 12px;
+
+    color: var(--muted);
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* Header line */
+
+.header-line {
+
+    width: 45px;
+
+    height: 3px;
+
+    background: var(--gold);
+
+    border-radius: 20px;
+
+    margin: 16px auto 0;
+
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.document-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 14px;
+
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.document-card {
+
+    position: relative;
+
+    min-height: 145px;
+
+    padding: 20px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,0.92);
+
+    border:
+        1px solid
+        var(--border);
+
+    box-shadow:
+        var(--shadow);
+
+    text-decoration: none;
+
+    color: var(--text);
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        border-color .25s ease;
+
+}
+
+
+/* =========================================
+   CARD TOP ACCENT
+========================================= */
+
+.document-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--navy),
+            var(--blue),
+            var(--gold)
+        );
+
+}
+
+
+/* =========================================
+   CARD BACKGROUND DETAIL
+========================================= */
+
+.document-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    right: -50px;
+    top: -50px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(59,111,158,0.06);
+
+}
+
+
+/* =========================================
+   CARD LABEL
+========================================= */
+
+.card-label {
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: var(--gold);
+
+    margin-bottom: 9px;
+
+}
+
+
+/* =========================================
+   CARD TITLE
+========================================= */
+
+.card-title {
+
+    font-size: 17px;
+
+    line-height: 1.25;
+
+    font-weight: 700;
+
+    color: var(--navy);
+
+    max-width: 90%;
+
+}
+
+
+/* Long title */
+
+.card-title.long {
+
+    font-size: 14px;
+
+    line-height: 1.35;
+
+}
+
+
+/* =========================================
+   ARROW
+========================================= */
+
+.card-arrow {
+
+    position: absolute;
+
+    right: 16px;
+
+    bottom: 16px;
+
+    width: 31px;
+
+    height: 31px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: var(--navy);
+
+    color: white;
+
+    font-size: 15px;
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.document-card:hover {
+
+    transform:
+        translateY(-4px);
+
+    border-color:
+        rgba(59,111,158,0.25);
+
+    box-shadow:
+        0 16px 38px
+        rgba(16,42,67,0.13);
+
+}
+
+
+.document-card:hover
+.card-arrow {
+
+    transform:
+        translateX(4px);
+
+    background:
+        var(--gold);
+
+}
+
+
+/* =========================================
+   ACTIVE / TOUCH
+========================================= */
+
+.document-card:active {
+
+    transform:
+        scale(0.97);
+
+}
+
+
+/* =========================================
+   SPECIAL FULL WIDTH CARD
+========================================= */
+
+.document-card.full {
+
+    grid-column:
+        1 / -1;
+
+    min-height: 115px;
+
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+
+    text-align: center;
+
+    margin-top: 28px;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+
+    color: #94a3b8;
+
+}
+
+
+.footer span {
+
+    display: block;
+
+    margin-top: 6px;
+
+    color: var(--gold);
+
+}
+
+
+/* =========================================
+   TABLET / DESKTOP
+========================================= */
+
+@media (min-width: 600px) {
+
+    .app {
+
+        padding-top: 65px;
+
+    }
+
+    .document-card {
+
+        min-height: 165px;
+
+    }
+
+}
+
+
+/* =========================================
+   SMALL PHONE
+========================================= */
+
+@media (max-width: 370px) {
+
+    .app {
+
+        padding:
+            32px
+            13px
+            25px;
+
+    }
+
+    .header h1 {
+
+        font-size: 29px;
+
+    }
+
+    .header p {
+
+        font-size: 9px;
+
+        letter-spacing: 1px;
+
+    }
+
+    .document-grid {
+
+        gap: 10px;
+
+    }
+
+    .document-card {
+
+        min-height: 135px;
+
+        padding: 17px;
+
+        border-radius: 17px;
+
+    }
+
+    .card-title {
+
+        font-size: 14px;
+
+    }
+
+    .card-title.long {
+
+        font-size: 12px;
+
+    }
+
+    .card-arrow {
+
+        width: 27px;
+
+        height: 27px;
+
+        right: 12px;
+
+        bottom: 12px;
+
+    }
+
+}
